@@ -1,0 +1,56 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ;
+}
+
+.side{
+    margin:0;
+    padding:0;
+    background-color: rgb(57, 16, 38);
+    postion:fixed;
+    width: 20%;
+    min-height: 100vh;
+}
+.side a{
+    display:block;
+    padding: 10px 5px 10px 30px;
+    text-decoration:none;
+    font: size 25px;
+    color:white;
+    font-weight: bold;
+}
+.side a:hover{
+    background-color:white;
+    color: rgb(57, 16, 38);
+}
+    @media only screen and (max-width: 600px) {
+        .side{
+            display: none;
+        }
+        .side a{
+            padding: 10px 10px 10px 20px;
+        }
+    }
+.content{
+    width:80%;
+    background-color: #f1f1ff;
+}
+.main{
+    height:100%;
+    width:100%;
+}
+.header{
+    background-color: white;
+    height: 10vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.cardd{
+    border-radius: 15px;
+}

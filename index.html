@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+<!-- bootstrap 5 offline -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Fontawesome icons offline -->
+<link rel="stylesheet" href="fontawesome/css/all.css">
+<!-- Fontawesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- External css code -->
+<link rel="stylesheet" href="design.css">
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+    <div class="main d-flex">
+        <!-- d-flex -->
+    <div class="side d-flex flex-column ">
+
+        <!-- <span class="text-5xl cursor-pointer mx-2 md:hidden block"> -->
+         <span class="cursor-pointer mx-2 d-block d-md-none fs-1">
+            <i name="menu" class="fa-solid fa-bars"  onclick="Menu(this)"></i>
+        </span>
+
+        <ul class="nav d-block  py-2">
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-indent"></i>&nbsp; <span class="d-none d-sm-inline">Dasboard</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-book-open-reader"></i>&nbsp; <span class="d-none d-sm-inline">Students</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-person-chalkboard"></i>&nbsp; <span class="d-none d-sm-inline">Teachers</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-school"></i>&nbsp; <span class="d-none d-sm-inline">Schools</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-hand-holding-dollar"></i>&nbsp; <span class="d-none d-sm-inline">Income</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-circle-question"></i>&nbsp; <span class="d-none d-sm-inline">Help</span> </a> </li>
+            <li class="nav-item py-2"> <a class="nav-link" href=""><i class="fa-solid fa-gear"></i>&nbsp; <span class="d-none d-sm-inline">Settings</span> </a> </li>
+        </ul>
+    </div>
+<div class="content">
+     <div class="conatiner">
+        <div class="header d-flex d-sm-flex  align-items-center justify-content-center">
+            <div class="search mt-2 d-flex ml-2">
+                <input class="form-control w-100" type="text" placeholder="Search...">
+                <button class="btn border"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+            </div>
+            <div class="mt-1 d-flex ml-5 icon">
+                
+                <span class="mx-2 mt-2"> <i class="fa-2xl fa-solid fa-bell"></i> </span>
+                <span class="ml-2"> <i class="fa-2xl fa-solid fa-user-tie border py-4 px-2 rounded-circle"></i> </span>
+            </div>
+        </div>
+        
+        <div class="row mt-1 mx-2">
+            <div class="col-md-3 col-sm-6 mt-2">
+                <div class="card mt-2 mt-sm-0 shadow cardd">
+                    <div class="card-body">
+
+                            <h1>2194  <span style="font-size:30px;  color: rgb(57, 16, 38);" class="ml-4"> <i class="ml-3 ml-sm-0 fa-xl fa-solid fa-book-open-reader"></i></span></h1>
+                            <h3>Students</h3>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mt-2">
+                <div class="card mt-2 mt-sm-0 shadow cardd">
+                    <div class="card-body">
+                        
+                   
+                        <h1>53  <span style="font-size:30px;  color: rgb(57, 16, 38);" class="ml-5"> <i class=" ml-3 ml-sm-0 fa-xl fa-solid fa-person-chalkboard"></i> </span></h1>
+                        <h3>Teachers</h3>
+                
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mt-2">
+                <div class="card mt-2 mt-sm-0 shadow cardd">
+                    <div class="card-body">
+                       
+
+                       
+                            <h1>5  <span style="font-size:30px;  color: rgb(57, 16, 38);" class="ml-4"> <i class=" ml-3 ml-sm-0  fa-xl fa-solid fa-school"></i>  </span> </h1>
+                            <h3>Schools</h3>
+
+                            
+                        
+                           
+                      
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mt-2">
+                <div class="card mt-2 mt-sm-0 shadow cardd">
+                    <div class="card-body">
+                            <h2>350000 <span style="font-size:30px;  color: rgb(57, 16, 38);"> <i class=" fa-lg fa-solid fa-hand-holding-dollar"></i>  </span>
+                            </h2>
+                            <h2>Income</h2>
+                            
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+                  <!-- charts -->
+                  <div class="row m-2">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h5 class="text-center">Payment rate</h5>
+                            <hr>
+                            <div class="card-body">
+                                    <canvas id="myChart" class="w-50 h-50"></canvas>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div>
+                            <canvas id="MyChart" ></canvas>
+                          </div>
+                    </div>
+        
+                  </div>
+
+
+        <div class="row m-2">
+            <div class="col-md-7">
+              <div class="card">
+                    <div class="d-flex align-items-center justify-content-between mx-2 mt-1">
+                        <div>
+                          <h1 class="m-0">Recent Payments</h1>
+                        </div>
+                        <div>
+                          <button class="btn btn-dark mt-2">View all</button>
+                        </div>
+                      
+                </div>
+                <hr>
+                <div class="card-body">
+                
+                  <table class="table table-borderless table-sm">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>School</th>
+                        <th>Amount</th>
+                        <th>Option</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Patrick</td>
+                        <td>St Joseph College</td>
+                        <td>$120</td>
+                        <td><button class="btn btn-dark">View all</button></td>
+                      </tr>
+                      <!-- Additional rows here -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="d-flex align-items-center justify-content-between mx-2">
+                    <div>
+                      <h2 class="m-0">New Students</h2>
+                    </div>
+                    <div>
+                      <button class="btn btn-dark mt-2">View all</button>
+                    </div>
+                  </div>
+                  <hr>
+                <div class="card-body">
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                          <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Option</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class=""><i class="ml-1 fa-xl fa-solid fa-user-graduate"></i></td>
+                            <td>Noel</td>
+                            <td><i class=" ml-2 fa-xl fa-solid fa-circle-info"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  <!-- Additional content here -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+</div>
+    </div>
+
+    <!--chart link cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+   <script src="winning.js"></script>
+<script src="payment.js"></script>
+
+    	<!-- Script -->
+	<script>
+		function Menu(e){
+			let list =document.querySelector('ul');
+
+			e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]'),list.classList.add('opacity-100')): (e.name ="menu",list.classList.remove('top-[80px]'),list.classList.add('opacity-100'))
+		}
+	</script>
+
+</body>
+</html>
